@@ -1,0 +1,112 @@
+  
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.ac-container{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 568px;
+    margin: 10px auto 30px auto;
+}
+.ac-container label{
+    font-style: italic;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color: #777;
+    text-shadow: 1px 1px 1px rgba(171, 235, 158, 0.8);
+    line-height: 33px;
+    font-size: 19px;
+    font-weight: 700;
+	box-shadow: 
+		0px 0px 0px 1px rgba(166, 221, 164, 0.3), 
+		1px 0px 0px 0px rgba(73, 223, 98, 0.9) inset, 
+		0px 2px 2px rgba(17, 97, 66, 0.1);
+}
+
+
+.ac-container label:hover{
+    background: #fff;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+    background: #0bee29;
+    color: #3d8943;
+    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+    box-shadow: 
+        0px 0px 0px 1px rgba(155,155,155,0.3), 
+        0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+}
+
+.ac-container input{
+    display: none;
+}
+
+.ac-container .content{
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear; 
+}
+.ac-container input:checked ~ .content{
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+    height : 200px; 
+}
+
+.ac-container .content p{
+    font-style: italic;
+    font-weight: 700;
+    color: #777;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .datails-img {
+    margin: auto;
+} */
+/*=====================*/
+
+  .details label::before {
+    content: "×";
+    position: absolute;
+    color: #0c0404;
+    font-size: 2rem;
+    line-height: 1rem; 
+    transform: rotate(-45deg);
+    top: 0.8rem;
+    left: unset;
+    right: 0.6rem;
+  }
+  
+  .details input[type="checkbox"]:checked~label::before{
+    transform: rotate(90deg);
+}
+
+
+ 
