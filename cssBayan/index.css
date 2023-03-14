@@ -17,7 +17,7 @@ body {
     z-index: 20;
     display: block;
     height: 5vh;
-    cursor: pointer;
+    /* cursor: pointer; */
     color: #15b149;
     text-shadow: 1px 1px 1px rgba(171, 235, 158, 0.8);
     line-height: 33px;
@@ -87,26 +87,11 @@ label.content{
     margin: auto;
 }
 
-.details .title::before {
-    content: "×";
-    position: absolute;
-    color: #15b149 ;
-    font-size: 2rem;
-    line-height: 1rem; 
-    transform: rotate(-45deg);
-    top: 0.8rem;
-    left: unset;
-    right: 0.6rem;
-  }
-  
-  .details input[type="checkbox"]:checked~label::before{
-    transform: rotate(90deg);
-    color: #0c0404;
-}
+
 
 /*=====================*/
 
-@media ((min-width: 820px) ) { 
+@media (min-width: 820px ) { 
     .ac-container{
         width: 90%;
         height: 100%;
@@ -124,7 +109,7 @@ label.content{
   }
  }
 
-@media ((min-width: 1920px) ) { 
+@media (min-width: 1520px ) { 
  
     .ac-container input:checked ~ .content
 {
@@ -137,7 +122,27 @@ label.content{
     width: 55vh;
     height: 35vh;
 }
-.details .title::before {
+.details .title:before {
     font-size: 4rem;
   }
+  .details .title:before {
+    content: "×";
+    position: absolute;
+    color: #15b149 ;
+    font-size: 2rem;
+    line-height: 1rem; 
+    transform: rotate(-45deg);
+    top: 0.8rem;
+    left: unset;
+    right: 0.6rem;
+  }
+  
+  .details input[type="checkbox"]:checked~label:before{
+    transform: rotate(180deg);
+    color: #0c0404;
+}
+
+.ac-container label.title{
+    cursor: pointer;
+}
  }
