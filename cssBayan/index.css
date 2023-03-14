@@ -1,0 +1,149 @@
+  
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.ac-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    margin: 2vh auto ;
+}
+.ac-container label.title{
+    font-style: italic;
+    padding: 1vh 3vh;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 5vh;
+    cursor: pointer;
+    color: #15b149;
+    text-shadow: 1px 1px 1px rgba(171, 235, 158, 0.8);
+    line-height: 33px;
+    font-size: 1rem;
+    font-weight: 700;
+	box-shadow: 
+		0px 0px 0px 1px rgba(166, 221, 164, 0.3), 
+		1px 0px 0px 0px rgba(73, 223, 98, 0.9) inset, 
+		0px 2px 2px rgba(17, 97, 66, 0.1);
+}
+
+
+.ac-container label.title:hover
+{
+    background: #fff;
+}
+
+.ac-container input:checked + label.title,
+.ac-container input:checked + label.title:hover{
+    background: #0bee29;
+    color: #21241a;
+    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+    box-shadow: 
+        0px 0px 0px 1px rgba(155,155,155,0.3), 
+        0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.ac-container input
+{
+    display: none;
+}
+
+.ac-container .content
+{
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0vh;
+    position: relative;
+    z-index: 10;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear; 
+}
+
+.details:active input ~ .content,
+.details-img:hover 
+{
+    opacity: .5;
+}
+
+.ac-container input:checked ~ .content
+{
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+    height : 30vh; 
+}
+
+label.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-img {
+    width: 45vh;
+    height: 25vh;
+    margin: auto;
+}
+
+
+
+/*=====================*/
+
+@media (min-width: 820px ) { 
+    .ac-container{
+        width: 90%;
+        height: 100%;
+    }
+
+    .ac-container label.title{
+        font-size: 2rem;
+    }
+    .ac-container input:checked ~ .content
+{
+    height : 30vh; 
+}
+.details .title::before {
+    font-size: 3rem;
+  }
+  .details .title:before {
+    content: "×";
+    position: absolute;
+    color: #15b149 ;
+    font-size: 2rem;
+    line-height: 1rem; 
+    transform: rotate(-45deg);
+    top: 0.8rem;
+    left: unset;
+    right: 0.6rem;
+  }
+  
+  .details input[type="checkbox"]:checked~label:before{
+    transform: rotate(180deg);
+    color: #0c0404;
+}
+ }
+
+@media (min-width: 1320px ) { 
+ 
+    .ac-container input:checked ~ .content
+{
+    height : 40vh; 
+}
+.ac-container label.title{
+    font-size: 3rem;
+}
+.details-img {
+    width: 55vh;
+    height: 35vh;
+}
+.details .title:before {
+    font-size: 4rem;
+  }
+
+
+.ac-container label.title{
+    cursor: pointer;
+}
+ }
