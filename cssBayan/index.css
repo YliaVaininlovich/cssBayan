@@ -109,7 +109,7 @@ label.content{
   }
  }
 
-@media (min-width: 1520px ) { 
+@media (min-width: 1320px ) { 
  
     .ac-container input:checked ~ .content
 {
